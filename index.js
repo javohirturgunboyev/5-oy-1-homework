@@ -1,136 +1,172 @@
-// 1-masala
+1-masala
 
-// REGULAR KO'RINISHI
+function filterWord(str){
+    let filteredWord = str.filter(word => word.length >= 5)
 
-// let massiv = ["apple", "banana", "orange", "grape", "kiwi"];
+    let result = filteredWord.map(word => word.charAt(0).toUpperCase() + word.slice(1))
 
-// let kattaHarf = (word) => {
-//   return word.charAt(0).toUpperCase() + word.slice(1);
-// };
+    return result
+}
 
-// let natija = massiv.filter((word) => {
-//   return word.length >= 5;
-// }).map((word) => {
-//   return word.replace(/^./, kattaHarf);
-// });
-
-// console.log(natija);
-
+console.log(filterWord(["bmw m5 cs", "mercedez benz", 'audi', 'porsche']));
 
 // 2-masala
 
-// let students =[
-// {name : "Alice" , Age :19},
-// {name : "Bob" , Age :39},
-// {name : "Sarvar" , Age :29},
-// {name : "Nozim" , Age :49},
-// {name : "david" , Age :9},
+// function findStudent(students) {
+//   let newStudent = students.filter((student) => student.age >= 20);
+
+//   if (newStudent) {
+//     return newStudent
+//   } else {
+//     return null;
+//   }
+// }
+
+// const students = [
+//   { name: "Alice", age: 19 },
+//   { name: "Bob", age: 21 },
+//   { name: "Charlie", age: 18 },
+//   { name: "David", age: 22 },
 // ];
 
-
-// let test = function(arr){
-// let result = arr.find((value) => value.age > 20);
-
-// return result.name.toUpperCase();
-// };
-
-// console.log(test(students));
-
+// console.log(findStudent(students));
 
 // 3-masala
 
-// let prices = [3000, 5000, 7000, 1000];
+// function narxHisobla(narxlar) {
+//   let yuzDanKatta = narxlar.filter((narx) => narx > 100);
 
-// let sum = 0;
-// prices.forEach( el =>{
-//     if (el>100) {
-//         sum += el
-//     }
-  
+//   let umumiyNarx = yuzDanKatta.reduce((acc, price) => acc + price, 0);
 
-// })
+//   return umumiyNarx;
+// }
 
-// console.log(sum);
-
+// console.log(narxHisobla([50, 150, 200, 80, 120, 90, 300]));
 
 // 4-masala
 
-// function isPositive (arr){
-// let result = arr.every(function(value) {
-// return value>0
-// })
+// function numberTest(numbers){
+//     let musbat = numbers.every(num => num > 0)
+
+//     let kattaSon = numbers.some(num => num > 100)
+
+//     if(musbat){
+//         console.log("barcha sonlar musbat");
+//     } else{
+//         console.log("musbat bo'lmagan sonlar bor");
+//     }
+
+//     if(kattaSon){
+//         console.log("Katta son bor");
+//     }
 // }
 
-// let isExistOverHundered arr.some(function(value){
-// return value>100
-// })
-
-// if (isExistOverHundered) {
-//     console.log();
-// }
-
-// if (result) {
-//  return "Barcha sonlar musbat"   
-// } else{
-// return "Musbat bo'lmagan sonlar bor"
-// }
-
-// console.log(isPositive([4, 6, 10, 200, 5]));
+// console.log(numberTest([10, 20, 130, 40, 50]));
 
 // 5-masala
 
-// let arr = [1, 2, 3, 4, 5]
-
-// function sqrtArray(arg){
-// let result = arg.map(function(value){
-// return value**2
-// })
-
-// console.log(result);
+// function kvadratNumber(numbers) {
+//   return numbers.map((num) => num * num);
 // }
 
-// sqrtArray(arr);
+// function runArr(arr) {
+//   arr.forEach((element) => console.log(element));
+// }
+
+// let num = [1, 2, 3, 4, 5];
+
+// let kvadratNum = kvadratNumber(num)
+
+// runArr(kvadratNum)
 
 // 6-masala
 
-// let arr = [1400, 5000, 3000, 1000];
+// function oylikHisobla(oylik){
 
-// function salary (arr){
-// let result = arr.filter(function(value){
-// return value>=2000
-// })
+//     let filterOylik = oylik.filter(maosh => maosh >= 2000)
 
-// result = result.map(function(value){
-//     return Math.floor(value*1.1)
-//     })
+//     let newOylik = filterOylik.map(pul => pul * 1.10)
 
-//     return result;
+//     let totalPul = newOylik.reduce((acc, salary) => acc + salary, 0)
+
+//     return totalPul
 // }
 
-// console.log(salary(arr));
-
+// console.log(oylikHisobla([1500, 2100, 1800, 2400, 3000]));
 
 // 7-masala
 
-// let students = [
-// {name:"Okifxon", yoshi:12, ball:10},
-// {name:"Ozodbek", yoshi:32, ball:30},
-// {name:"Shuxratbek", yoshi:22, ball:40},
-// {name:"Javohirboy", yoshi:15, ball:95},
-// {name:"Saydullo", yoshi:42, ball:80},
+// const students = [
+//     { name: "Alice", age: 22, grade: 75 },
+//     { name: "Bob", age: 20, grade: 85 },
+//     { name: "Charlie", age: 23, grade: 90 },
+//     { name: "David", age: 21, grade: 65 },
+//     { name: "Eve", age: 19, grade: 95 }
 // ];
 
-// function findStudent(arr){
-// let result =arr.find(function(value) {
-// return value.ball >=80
-// })
+// function processStudents(students) {
 
-//  let success = arr.filter(function(value){
-//     return value.ball >=80
-// })
+//     const firstHighScorer = students.find(student => student.grade >= 80);
 
-// console.log(success);
-// return[result.name, result.yoshi]
+//     const highScorers = students.filter(student => student.grade >= 80);
+
+//     const highScorerNames = highScorers.map(student => student.name.toUpperCase());
+
+//     return {
+//         firstHighScorer: firstHighScorer ? { name: firstHighScorer.name, age: firstHighScorer.age } : null,
+//         highScorerNames: highScorerNames
+//     };
 // }
 
-// console.log(findStudent(students));
+// const result = processStudents(students);
+// console.log("Kamida 80 ball olgan birinchi talaba:", result.firstHighScorer);
+// console.log("80 dan yuqori ball olgan barcha talabalar ismlari:", result.highScorerNames);
+
+
+
+
+// 8-masala
+
+// function upperStr(str){
+//     return str.toUpperCase()
+// }
+
+// console.log(upperStr("Umidjon"));
+
+// 9-masala
+
+// function substringTop(inputString, substring){
+//     return inputString.includes(substring)
+// }
+
+// console.log(substringTop("Umidjon", "U"));
+
+// 10-masala
+
+// function replaceWord(str) {
+//     return str.replace(/JavaScript/g, "JS");
+// }
+
+// console.log(replaceWord("I am learning JavaScript"));
+
+// 11-masala
+
+// function reverseWords(str) {
+//   const wordsArray = str.split(" ");
+
+//   const reversedWordsArray = wordsArray.reverse();
+
+//   const reversedString = reversedWordsArray.join(" ");
+
+//   return reversedString;
+// }
+
+// console.log(reverseWords("n o j d i m U"));
+
+// 12-masala
+
+// function trimString(str) {
+//     return str.trim();
+// }
+
+// console.log(trimString("   Salom   "));
